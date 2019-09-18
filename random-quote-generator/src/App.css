@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css?family=Homemade+Apple");
+:root {
+  --main-color: coral;
+}
+body {
+  background-color: var(--main-color);
+  font-family: sans-serif;
+}
+#quote-box {
+  width: 30%;
+  min-width: 700px;
+  height: 30%;
+  background-color: white;
+  color: var(--main-color);
+  margin: 5% auto auto auto;
+  padding: 2em;
+  text-align: center;
+  box-shadow: 0px 0px 2px grey;
+}
+#text {
+  font-family: "Homemade Apple";
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.7;
+}
+#author {
+  font-size: 18px;
+  font-style: italic;
+  position: relative;
+  left: 35%;
+}
+#new-quote {
+  background-color: var(--main-color);
+  padding: 1em 2em 1em 2em;
+  margin: 1.5em 0 0 0;
+  position: relative;
+  left: 25%;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+#tweet-quote {
+  position: relative;
+  right: 25%;
+}
