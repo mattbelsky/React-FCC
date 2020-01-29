@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+:root {
+  --calc-background: hsl(0, 0%, 10%);
+  --input-display-background: hsl(0, 0%, 20%);
+  --input-display-padding: 10px 15px 10px 15px;
+  --num-padding: 35px 15px 35px 15px;
+}
+body {
+  background: hsl(0, 0%, 5%);
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-size: 3em;
+  text-align: center;
+}
+.calculator {
+  background: var(--calc-background);
+  height: auto;
+  width: 30%;
+  min-width: 500px;
+  margin: 0 auto auto auto;
+  background: hsl(0, 0%, 10%);
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(6, auto);
+  grid-template-areas:
+    "in-disp in-disp in-disp in-disp"
+    "in-disp in-disp in-disp in-disp"
+    "seven   eight   nine    operator"
+    "four    five    six     operator"
+    "one     two     three   operator"
+    "zero    point   equals  operator";
+}
+.input-display-container {
+  background: var(--input-display-background);
+  box-shadow: 0px 1px 2px black;
+  grid-area: in-disp;
+  padding: 25px;
+}
+.input {
+  padding-right: var(--input-display-padding);
+  font-size: 1.5em;
+  text-align: right;
+}
+.display {
+  color: hsl(0, 0%, 60%);
+  padding-right: var(--input-display-padding);
+  text-align: right;
+}
+.number {
+  height: 100%;
+  padding: var(--num-padding);
+}
+.operator-container {
+  grid-area: operator;
+  display: grid;
+  grid-template-rows: repeat(5, auto);
+  align-content: space-evenly;
+  border-left: 2px solid var(--input-display-background);
+}
+.operator {
+  color: hsl(210, 40%, 56%);
+  font-size: 0.8em;
+}
+.point {
+  text-align: center;
+  grid-area: point;
+  padding: var(--num-padding);
+}
+.equals {
+  grid-area: equals;
+  padding: var(--num-padding);
+}
